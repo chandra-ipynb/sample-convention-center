@@ -39,7 +39,7 @@ form.addEventListener('submit', event => {
   const note = document.getElementById('eventNote').value.trim();
   const date = dateValue ? new Date(`${dateValue}T00:00:00`).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }) : 'Not decided yet';
   const message = [`Hello S.R.K Convention Centre,`, `I would like to enquire about a booking.`, `Name: ${name}`, `Phone: ${phone || 'Not provided'}`, `Event: ${type}`, `Preferred date: ${date}`, note ? `Details: ${note}` : ''].filter(Boolean).join('\n');
-  window.open(`https://wa.me/919880325484?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+  window.open(`https://web.whatsapp.com/send?phone=919880325484&text=${encodeURIComponent(message)}`, '_blank', 'noopener');
 });
 
 const lightbox = document.getElementById('lightbox');
